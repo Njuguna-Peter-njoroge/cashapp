@@ -1,0 +1,63 @@
+<div
+  class="min-h-screen bg-gray-50 flex items-center justify-center p-4"
+  style="background-image: url('https://deepseek-api-files.obs.cn-east-3.myhuaweicloud.com/raw/2025/07/31/file-8364652c-52ef-4f9b-b9e2-778344afa05f?response-content-disposition=attachment%3B+filename%3D%22image.png%22&AccessKeyId=OD83TSXECLFQNNSZ3IF6&Expires=1754075721&Signature=49umE9XrK7oZqaxrNFAn3cD2bCM%'); background-size: cover; background-position: center;"
+>
+  <div class="w-full max-w-md bg-white rounded-lg shadow-lg overflow-hidden">
+    <!-- Close button -->
+    <div class="flex justify-end p-4">
+      <button class="w-8 h-8 flex items-center justify-center">
+        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Main content -->
+    <div class="px-8 pb-8">
+      <!-- Success message -->
+      <div class="flex flex-col items-center justify-center mb-4 text-center">
+        <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mb-2">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+        <span class="text-2xl font-semibold text-black">{{ amount() }} sent</span>
+      </div>
+
+      <p class="text-gray-600 text-base mb-12">We'll let Caiden know.</p>
+
+      <!-- PayPal card -->
+      <div class="flex justify-center mb-8">
+        <img
+          src="https://www.paypalobjects.com/marketing/web23/us/en/ppe/rewards/split-section-2-size-all-v2.png"
+          alt="PayPal Card"
+          class="w-50 h-50 object-contain"
+        />
+      </div>
+
+      <!-- Promotional text -->
+      <div class="text-center mb-8">
+        <p class="text-gray-700 text-base leading-relaxed">
+          Did you know you could get a debit card and use your PayPal balance at stores and ATMs?
+        </p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="space-y-4">
+        <button
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-full transition-colors duration-200"
+          (click)="refreshAmount()"
+        >
+          Get Yours Today
+        </button>
+
+        <button
+          class="w-full text-blue-600 font-semibold py-4 px-6 rounded-full hover:bg-blue-50 transition-colors duration-200"
+          (click)="refreshAmount()"
+        >
+          Not now
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
